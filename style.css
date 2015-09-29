@@ -1,0 +1,128 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(http://fonts.googleapis.com/css?family=Play);
+
+@font-face{
+	font-family: "logotypejp";
+	src: url(logotypejp.ttf);
+}
+
+body{
+	background-color: #50b0a0;
+	margin: 0 auto;
+	width: 800px;
+}
+
+.top{
+	color: #fce0c7;
+}
+h1.top{
+	width: 800px;
+	margin: 160px 0 96px;
+	font-size: 10.8rem;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	/* 文字枠取って影つける */
+	text-shadow:
+		/* 文字枠 */
+		0px 2px #494949,
+		2px 0px #494949,
+		0px -2px #494949,
+		-2px 0px #494949,
+		2px 2px #494949,
+		-2px 2px #494949,
+		2px -2px #494949,
+		-2px -2px #494949,
+		/* 影（インパクト：赤） */
+		2px -4px #894949,
+		3px -4px #894949,
+		4px -4px #894949,
+		/* 影（実影：文字色） */
+		6px -6px #494949;
+}
+h1.top:hover {
+	animation: ohyeah 0.1s linear infinite;
+	-webkit-animation: ohyeah 0.1s linear infinite;
+	-moz-animation: ohyeah 0.1s linear infinite;
+}
+/* ブルブルする */
+@keyframes ohyeah {
+	0% { transform: translate(2px, 2px) rotate(0deg); }
+	20% { transform: translate(-2px, 2px) rotate(1deg); }
+	40% { transform: translate(3px, -2px) rotate(0deg); }
+	60% { transform: translate(2px, 0px) rotate(-1deg); }
+	80% { transform: translate(-2px, -1px) rotate(0deg); }
+	100% { transform: translate(-2px, 0px) rotate(1deg); }
+}
+/* prefix for webkit */
+@-webkit-keyframes ohyeah {
+	0% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	20% { -webkit-transform: translate(-2px, 2px) rotate(1deg); }
+	40% { -webkit-transform: translate(3px, -2px) rotate(0deg); }
+	60% { -webkit-transform: translate(2px, 0px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-2px, -1px) rotate(0deg); }
+	100% { -webkit-transform: translate(-2px, 0px) rotate(1deg); }
+}
+/* prefix for mozzila */
+@-moz-keyframes ohyeah {
+	0% { -moz-transform: translate(2px, 2px) rotate(0deg); }
+	20% { -moz-transform: translate(-2px, 2px) rotate(1deg); }
+	40% { -moz-transform: translate(3px, -2px) rotate(0deg); }
+	60% { -moz-transform: translate(2px, 0px) rotate(-1deg); }
+	80% { -moz-transform: translate(-2px, -1px) rotate(0deg); }
+	100% { -moz-transform: translate(-2px, 0px) rotate(1deg); }
+}
+
+ul.top{
+	overflow: hidden;
+	width: 600px;
+	margin: 20px auto 120px;
+	padding: 10px auto;
+}
+ul.top li{
+	position: relative;
+	float: left;
+	width: 80px;
+	height: 32px;
+	margin: 0 10px;
+	padding: 12px 5px 0;
+	font-size: 1.2rem;
+	font-family: "Play", "logotypejp";
+	text-align: center;
+	background-color: #328a76;
+}
+ul.top li a{
+	position: absolute;
+	top: 0px;
+	right: 0;
+	width: 80px;
+	height: 32px;
+	padding: 12px 5px 0;
+	color: #fce0c7;
+	text-decoration: none;
+}
+ul.top li a:nth-child(even) {
+	position: absolute;
+	top: 40px;
+	right: 0;
+	width: 80px;
+	height: 28px;
+	background-color: #1a6246;
+	border-bottom: 4px solid #894949;
+}
+
+a.ghost{
+	border-radius: 2px;
+	border: 2px solid #50b0a0;
+	padding: 2px 8px;
+	float: right;
+	font-size: 0.6rem;
+	text-decoration: none;
+	color: #494949;
+	background-color: none;
+	transition: background-color 0.3s, color 0.1s;
+}
+a.ghost:hover {
+	color: #fff5e6;
+	background-color: #50b0a0;
+}

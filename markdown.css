@@ -1,0 +1,65 @@
+/* markdown */
+div.markdown{
+	border: 3px solid #494949;
+	width: 600px;
+	margin: 60px auto;
+	padding: 32px 40px 40px;
+	background-color: #fff5e6;
+	font-family: 'Montserrat', sans-serif, "logotypejp";
+	color: #494949;
+	/* 影つける */
+	box-shadow:
+		/* 影（インパクト：赤） */
+		3px -3px #894949,
+		/* 影（実影：文字色） */
+		6px -6px #494949;
+}
+
+
+/* h1 - h4 */
+div.marked h1{
+	margin: 0;
+	padding: 0;
+	font-size: 3.6rem;
+}
+div.marked h2{
+}
+div.marked h3{
+}
+div.marked h4{
+}
+
+
+/* contens */
+div.marked p{
+}
+div.marked em{
+}
+div.marked strong{
+}
+div.marked a{
+}
+div.marked hr{
+}
+
+
+/* code */
+div.marked pre{
+}
+div.marked code{
+}
+
+
+/* table */
+div.marked table{
+}
+div.marked thead{
+}
+div.marked tbody{
+}
+div.marked tr{
+}
+div.marked th{
+}
+div.marked td{
+}
