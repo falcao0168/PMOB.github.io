@@ -8,7 +8,7 @@ import argparse
 
 def is_initialized():
     if os.path.isfile("index.json") is False:
-        print("First of all, initialize index.json with `init` command")
+        print("First of all, initialize index.json with `init` command.")
         return False
     return True
 
@@ -32,7 +32,7 @@ def remove(fname):
     lst = json.load(open("index.json"))
 
     if fname not in lst:
-        print("The file is not in the registered list.")
+        print("%s is not in the registered list." % fname)
         return False
 
     lst.remove(fname)
@@ -46,11 +46,11 @@ def register(fname):
     lst = json.load(open("index.json"))
 
     if fname in lst:
-        print("The file has been registered.")
+        print("%s has been registered." % fname)
         return False
 
     if fname not in os.listdir():
-        print("The file does not exist.")
+        print("%s does not exist." % fname)
         return False
 
     lst.append(fname)
