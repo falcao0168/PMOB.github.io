@@ -66,12 +66,12 @@ deadline: 2015-11-3
 caption: 部誌配布 - 東京電機大学2015年度鳩山祭
 ```
 
-- キャプションを指定する。
+- キャプションを指定/更新する。
 ```sh
 $ python3 registrar.py summarize foo.md 'あああ'
 ```
 
-- 期日を指定する。
+- 期日を指定/更新する。
 ```sh
 $ python3 registrar.py doom foo.md '2015-9-25'
 ```
