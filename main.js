@@ -19,16 +19,17 @@ $(function(){
 	});
 
 	// マークダウン変換
-	// src属性が指定されている場合外部ファイル読み込み
-	// それ以外埋め込みmarkdown
+	// classがmarkdownになっているdivの中身をマークダウンとして変換します
 	$.each($("div.markdown"), function(index, Node){
 		$target = $( Node );
-		if( !!$target.attr("src") ){
-			$.get( $target.attr("src"), markup_source( $target.attr("id") ));
-		} else {
-			markdown = $target.html();
-			$target.html( marked( markdown ) );
-		}
+		markdown = $target.html();
+		$target.html( marked( markdown ) );
+	});
+
+	// 外部ソース埋め込み
+	$.each($("div.include"), function(index, Node){
+		$target = $( Node );
+		$.get( $target.data("src"), markup_source( $target.attr("id") ));
 	});
 
 	// 戻る牡丹つくる
