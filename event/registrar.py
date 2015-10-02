@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import re
+import sys
 import json
 import time
 import calendar
@@ -30,15 +31,18 @@ def struct_utime(unixtime):
 
 class Registrar(object):
     def __init__(self):
+        self.enc = sys.getdefaultencoding()
         if os.path.isfile("index.json"):
-            self.data = json.load(open("index.json"))
+            with open("index.json") as fh:
+                self.data = json.loads(fh.read(), self.enc)
         else:
             self.data = []
 
     def done(self):
-        f = open("index.json", 'w')
-        json.dump(self.data, f, indent=2)
-        f.close()
+        code = json.dumps(self.data, ensure_ascii=False, indent=2)
+        with open("index.json", 'w') as fh:
+            fh.write(code)
+            fh.close()
 
     def show(self):
         for article in self.data:
