@@ -1,0 +1,56 @@
+/* h1 - h4 */
+article h1{
+	margin: 0;
+	padding: 0;
+	font-size: 3.2rem;
+}
+article h2{
+	margin: 0;
+	padding: 0;
+	font-size: 2.8rem;
+}
+article h3{
+	margin: 0;
+	padding: 0;
+	font-size: 2.4rem;
+}
+article h4{
+}
+
+
+/* contens */
+article p{
+}
+article em{
+}
+article strong{
+}
+article a{
+}
+article hr{
+}
+article time{
+	float: right;
+}
+
+
+/* code */
+article pre{
+}
+article code{
+}
+
+
+/* table */
+article table{
+}
+article thead{
+}
+article tbody{
+}
+article tr{
+}
+article th{
+}
+article td{
+}

@@ -4,12 +4,13 @@
 		<meta name="description" content="Student Programming Association named PMOB">
 		<meta name="keywords" content="student,programming,math,TDU,meno">
 		<meta name="author" content="PMOB">
-		<title>sandbox</title>
+		<title>PMOB.github.io</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
-		<link href="markdown.css" rel="stylesheet" type="text/css">
+		<link href="article.css" rel="stylesheet" type="text/css">
 		<script src="jquery-2.1.4.min.js"></script>
 		<script src="marked.min.js"></script>
-		<script src="main.js"></script>
+		<script src="core.js"></script>
+		<script src="index.js"></script>
 	</head>
 	<body>
 		<h1 class="top">PMOB</h1>
@@ -35,18 +36,20 @@
 				<a href="#works" class="smooth">WORKS</a>
 			</li>
 		</ul>
-		<div id="notice" class="markdown" src="NOTICE.md"></div>
-		<div id="history" class="markdown">
-# 活動記録
-		</div>
-		<div id="about" class="markdown" src="README.md"></div>
-		<div id="member" class="markdown">
+		<article id="notice">
+			<div class="include" data-src="NOTICE.md"></div>
+		</article>
+		<article id="history"></article>
+		<article id="about">
+			<div class="include" data-src="README.md"></div>
+		</article>
+		<article id="member" class="markdown">
 # メンバー
-		</div>
-		<div id="works" class="markdown">
+		</article>
+		<article id="works" class="markdown">
 # つくったの
 何もないんですけど。
 ウケる。
-		</div>
+		</article>
 	</body>
 </html>
