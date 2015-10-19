@@ -49,6 +49,9 @@ article hr{
 article time{
 	float: right;
 }
+article img{
+	margin: 0 2px;
+}
 
 
 /* code */
@@ -60,6 +63,7 @@ article code{
 
 /* table */
 article table{
+	 border-spacing: 12px 0;
 }
 article thead{
 }
@@ -68,6 +72,9 @@ article tbody{
 article tr{
 }
 article th{
+	margin-right: 40px;
 }
 article td{
+	padding: 0 8px;
+	border-bottom: 1.6px solid #909090;
 }
