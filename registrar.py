@@ -22,15 +22,15 @@ def find_all(dics, key, val):
 class Registrar(object):
     def __init__(self):
         self.enc = sys.getdefaultencoding()
-        if os.path.isfile("index.json"):
-            with open("index.json") as fh:
+        if os.path.isfile("member.json"):
+            with open("member.json") as fh:
                 self.data = json.loads(fh.read(), self.enc)
         else:
             self.data = []
 
     def done(self):
         code = json.dumps(self.data, ensure_ascii=False, indent=2)
-        with open("index.json", 'w') as fh:
+        with open("member.json", 'w') as fh:
             fh.write(code)
             fh.close()
 

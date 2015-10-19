@@ -32,7 +32,7 @@ $(function(){
 	});
 
 	/* メンバー引っ張ってくる */
-	$.getJSON( "index.json", function(data){
+	$.getJSON( "member.json", function(data){
 		$table = $("tbody");
 		$.each(data, function(index, member){
 			$me = $("<tr></tr>");

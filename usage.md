@@ -7,7 +7,7 @@ requirements
 
 usage
 ---------------
-registrar.py は `index.json` をいじる為のやつです。
+registrar.py は `member.json` をいじる為のやつです。
 直接JSONいじってもいいし今の所そっちの方が楽だけど作っちゃったぜ。へへ。
 
 `index.json` に登録されメンバーが
