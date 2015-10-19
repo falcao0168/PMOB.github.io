@@ -133,20 +133,20 @@ if __name__ == "__main__":
     parser_rm.set_defaults(func=rgst.rm)
 
     # doom
-    parser_rm = subparsers.add_parser('doom',
-        help='remove registered file from index')
-    parser_rm.add_argument('fname', help='file name')
-    parser_rm.add_argument('deadline',
+    parser_doom = subparsers.add_parser('doom',
+        help='set deadline of the article')
+    parser_doom.add_argument('fname', help='file name')
+    parser_doom.add_argument('deadline',
         help='the day that the article send to past log [yyyy-m-d]')
-    parser_rm.set_defaults(func=rgst.doom)
+    parser_doom.set_defaults(func=rgst.doom)
 
     # summarize
-    parser_rm = subparsers.add_parser('summarize',
-        help='remove registered file from index')
-    parser_rm.add_argument('fname', help='file name')
-    parser_rm.add_argument('caption',
+    parser_summ = subparsers.add_parser('summarize',
+        help='summarize article')
+    parser_summ.add_argument('fname', help='file name')
+    parser_summ.add_argument('caption',
         help='the caption for the article')
-    parser_rm.set_defaults(func=rgst.summarize)
+    parser_summ.set_defaults(func=rgst.summarize)
 
     args = parser.parse_args()
     if isinstance(args, argparse.Namespace):
