@@ -26,10 +26,10 @@ $ python3 registrar.py show
 
 - 登録されたファイルを除く
 ```sh
-$ python3 registrar.py remove foo.md
+$ python3 registrar.py rm foo.md
 foo.md removed.
 $ # 登録されていないファイルを除こうとする
-$ python3 registrar.py remove foo.md
+$ python3 registrar.py rm foo.md
 foo.md is not in the registered list.
 ```
 
@@ -57,13 +57,13 @@ set caption: 部誌配布 - 東京電機大学2015年度鳩山祭
 bar.md registered.
 $ 
 $ python3 registrar.py show
-- foo.md
-deadline: 1970-1-1
-caption:
-
 - bar.md
 deadline: 2015-11-3
 caption: 部誌配布 - 東京電機大学2015年度鳩山祭
+
+- foo.md
+deadline: 1970-1-1
+caption:
 ```
 
 - キャプションを指定/更新する。
