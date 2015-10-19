@@ -27,7 +27,6 @@ $ python3 registrar.py show
 - 消す
 ```sh
 $ python3 registrar.py rm <名前>
-foo.md removed.
 ```
 
 - 登録する
