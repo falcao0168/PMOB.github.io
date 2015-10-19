@@ -126,20 +126,3 @@ a.ghost:hover {
 	color: #fff5e6;
 	background-color: #50b0a0;
 }
-
-/* article box */
-article{
-	border: 3px solid #494949;
-	width: 600px;
-	margin: 60px auto;
-	padding: 32px 40px 40px;
-	background-color: #fff5e6;
-	font-family: 'Montserrat', sans-serif, "logotypejp";
-	color: #494949;
-	/* 影つける */
-	box-shadow:
-		/* 影（インパクト：赤） */
-		3px -3px #894949,
-		/* 影（実影：文字色） */
-		6px -6px #494949;
-}
