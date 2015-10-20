@@ -29,6 +29,7 @@ class Registrar(object):
             self.data = []
 
     def done(self):
+        data = sorted(self.data, key=lambda d: d['name'])
         code = json.dumps(self.data, sort_keys=True,
                 ensure_ascii=False, indent=2)
         with open("member.json", 'w') as fh:
