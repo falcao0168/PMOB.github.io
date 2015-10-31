@@ -74,6 +74,7 @@ h1.top:hover {
 }
 
 ul.top{
+	list-style-type: none;
 	overflow: hidden;
 	width: 600px;
 	margin: 20px auto 120px;
