@@ -29,7 +29,8 @@ class Registrar(object):
             self.data = []
 
     def done(self):
-        code = json.dumps(self.data, ensure_ascii=False, indent=2)
+        code = json.dumps(self.data, sort_keys=True,
+                ensure_ascii=False, indent=2)
         with open("member.json", 'w') as fh:
             fh.write(code)
             fh.close()

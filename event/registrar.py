@@ -40,7 +40,8 @@ class Registrar(object):
 
     def done(self):
         data = sorted(self.data, key=lambda d: d['deadline'], reverse=True)
-        code = json.dumps(data, ensure_ascii=False, indent=2)
+        code = json.dumps(data, sort_keys=True,
+                ensure_ascii=False, indent=2)
         with open("index.json", 'w') as fh:
             fh.write(code)
             fh.close()

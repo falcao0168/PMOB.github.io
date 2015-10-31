@@ -1,14 +1,26 @@
 [
-    {
-	"message": "ぐへへ",
-	"name": "matsub.rk",
-	"github": "matsub",
-	"twitter": "matsubrk"
-    },
-    {
-	"message": "おっぱい",
-	"name": "いっちー",
-	"github": "kurosanex",
-	"twitter": "sanex_now"
-    }
+  {
+    "github": "matsub",
+    "message": "ぐへへ",
+    "name": "matsub.rk",
+    "twitter": "matsubrk"
+  },
+  {
+    "github": "cohalz",
+    "message": "もうすぐA16",
+    "name": "cohalz",
+    "twitter": "cohalz"
+  },
+  {
+    "github": "kurosanex",
+    "message": "おっぱい",
+    "name": "いっちー",
+    "twitter": "sanex_now"
+  },
+  {
+    "github": "shamison258",
+    "message": "ｱﾁｮｰ",
+    "name": "shamison",
+    "twitter": "_sham258"
+  }
 ]
