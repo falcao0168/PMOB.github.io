@@ -53,6 +53,10 @@ article img{
 	margin: 0 5%;
 	width: 90%;
 }
+article img.linkicon{
+	width: 16px;
+	height: 16px;
+}
 
 
 /* code */
