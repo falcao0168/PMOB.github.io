@@ -50,10 +50,9 @@ $(function(){
 
 			if(member.github){
 				$gh = $("<img>");
+				$gh.addClass("linkicon");
 				$gh.attr("alt", "github");
 				$gh.attr("src", "img/GitHub-Mark-32px.png");
-				$gh.attr("width", "16px");
-				$gh.attr("height", "16px");
 
 				$gh_link = $("<a></a>");
 				$gh_link.attr("href", "https://github.com/"+member.github);
@@ -64,10 +63,9 @@ $(function(){
 
 			if(member.twitter){
 				$tw = $("<img>");
+				$tw.addClass("linkicon");
 				$tw.attr("alt", "twitter");
 				$tw.attr("src", "img/TwitterLogo.png");
-				$tw.attr("width", "16px");
-				$tw.attr("height", "16px");
 
 				$tw_link = $("<a></a>");
 				$tw_link.attr("href", "https://twitter.com/"+member.twitter);
