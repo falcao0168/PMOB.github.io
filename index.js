@@ -18,14 +18,11 @@ $(function(){
 			}
 			else if(shownArticles < 7) { // 期限杉
 				// 過去ログ行き上位7つキャプションと日時だけ表示
-				$tar = $("#history");
+				$tar = $("#history > h1");
 				$p = $("<p></p>");
 				deadline = new Date(article.deadline * 1000);
 				$p.html(deadline.toDateString() + " -- " + article.caption);
-				$tar.prepend($p);
-				$h1 = $("<h1></h1>");
-				$h1.html("活動記録");
-				$tar.prepend($h1);
+				$tar.after($p);
 				shownArticles += 1;
 			}
 		});
