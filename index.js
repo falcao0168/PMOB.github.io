@@ -1,31 +1,31 @@
 $(function(){
-	/* 活動記録引っ張ってくる */
-	// 外部ソース埋め込み
-	$.getJSON( "event/index.json", function(data){
-		shownArticles = 0;
-		now = Math.floor( $.now() / 1000 );
-		$.each(data, function(index, article){
-			if(article.deadline > now){ // 期限前
-				// 記事引っ張ってきてmarkdown変換
-				$tar = $("#notice");
-				$.get( "event/"+article.fname, markup_source( $tar ) );
-
-				// 掲載日時の表示
-				$time = $("<time></time>");
-				deadline = new Date(article.deadline * 1000);
-				$time.html("-- " + deadline.toDateString());
-				$tar.prepend($time);
-			}
-			else if(shownArticles < 7) { // 期限杉
-				// 過去ログ行き上位7つキャプションと日時だけ表示
-				$tar = $("#history > h1");
-				$p = $("<p></p>");
-				deadline = new Date(article.deadline * 1000);
-				$p.html(deadline.toDateString() + " -- " + article.caption);
-				$tar.after($p);
-				shownArticles += 1;
-			}
-		});
+	/* デザイン系 */
+	// 戻るボタンつくる
+	$backLink = $("<a></a>");
+	$backLink.addClass("ghost");
+	$backLink.addClass("smooth");
+	$backLink.attr("href", "#");
+	$backLink.html("あの頃にもどる");
+	$("article").append( $backLink );
+	// リストぬるってする
+	$("ul.top > li").on({
+		"mouseenter": function(evnt){
+			$target = $( $(this).children("a")[1] );
+			$target.animate({top: "0px"}, 200);
+		},
+		"mouseleave": function(evnt){
+			$target = $( $(this).children("a")[1] );
+			$target.animate({top: "40px"}, 200);
+		}
+	});
+	// スムーズスクロール
+	$("a.smooth").click(function(){
+		ref = $(this).attr("href");
+		target = $(ref == "#" || ref == "" ? "html" : ref);
+		pos = target.offset().top;
+		if (pos > 24) pos -= 24;
+		$("body, html").animate({scrollTop: pos}, 420);
+		return false;
 	});
 
 	/* メンバー引っ張ってくる */
