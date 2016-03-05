@@ -83,7 +83,7 @@ ul.top li a{
 	right: 0;
 	width: 80px;
 	height: 32px;
-	padding: 12px 5px 0;
+	padding: 8px 5px 0;
 	color: #fce0c7;
 	text-decoration: none;
 }
@@ -92,7 +92,7 @@ ul.top li a:nth-child(even) {
 	top: 40px;
 	right: 0;
 	width: 80px;
-	height: 28px;
+	height: 32px;
 	background-color: #1a6246;
 	border-bottom: 4px solid #894949;
 }
