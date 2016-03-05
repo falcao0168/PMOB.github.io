@@ -63,7 +63,7 @@ article thead{}
 article tbody{}
 article tr{}
 article th{ margin-right: 40px; }
-article td{ padding: 0 8px; border-bottom: 1.6px solid #909090; }
+article td{ padding: 0 8px; max-width: 192px;border-bottom: 1.6px solid #909090; }
 /*** /article box ***/
 
 
