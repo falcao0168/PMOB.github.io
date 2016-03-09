@@ -1,0 +1,5 @@
+future: true
+exclude:
+  - CONTRIBUTING.md
+
+permalink: /history/:year/:month/:title

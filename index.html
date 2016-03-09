@@ -1,106 +1,108 @@
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="Student Programming Association named PMOB">
-		<meta name="keywords" content="student,programming,math,TDU">
-		<meta name="author" content="PMOB">
-		<title>PMOB.github.io</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<link href="index.css" rel="stylesheet" type="text/css">
-		<script src="jquery-2.1.4.min.js"></script>
-		<script src="index.js"></script>
-	</head>
-	<body>
-		<h1 class="top">PMOB</h1>
-		<ul class="top">
-			<li>
-				<a href="#notice" class="smooth">やるの</a>
-				<a href="#notice" class="smooth">NOTICE</a>
-			</li>
-			<li>
-				<a href="#history" class="smooth">やったの</a>
-				<a href="#history" class="smooth">HISTORY</a>
-			</li>
-			<li>
-				<a href="#about" class="smooth">何なの</a>
-				<a href="#about" class="smooth">ABOUT</a>
-			</li>
-			<li>
-				<a href="#member" class="smooth">人たち</a>
-				<a href="#member" class="smooth">MEMBER</a>
-			</li>
-			<li>
-				<a href="#works" class="smooth">作った</a>
-				<a href="#works" class="smooth">WORKS</a>
-			</li>
+---
+layout: default
+title: Home
+use-css:
+- index.css
+use-js:
+- index.js
+---
+<h1 class="top">PMOB</h1>
+<ul class="top">
+	<li>
+		<a href="#notice" class="smooth">やるの</a>
+		<a href="#notice" class="smooth">NOTICE</a>
+	</li>
+	<li>
+		<a href="#history" class="smooth">やったの</a>
+		<a href="#history" class="smooth">HISTORY</a>
+	</li>
+	<li>
+		<a href="#about" class="smooth">何なの</a>
+		<a href="#about" class="smooth">ABOUT</a>
+	</li>
+	<li>
+		<a href="#member" class="smooth">人たち</a>
+		<a href="#member" class="smooth">MEMBER</a>
+	</li>
+	<li>
+		<a href="#works" class="smooth">作った</a>
+		<a href="#works" class="smooth">WORKS</a>
+	</li>
+</ul>
+{% capture TODAY %}{{ site.time | date: "%Y%m%d" }}{% endcapture %}
+<article id="notice">
+		{% for post in site.posts limit:3 %}
+		{% capture post_date %}{{ post.date | date: "%Y%m%d" }}{% endcapture %}
+		{% if post_date > TODAY %}
+		{{ post.excerpt }}
+		{% endif %}
+		{% endfor %}
+</article>
+<article id="history">
+	<h2>活動記録</h2>
+	<ul>
+		{% for post in site.posts limit:10 %}
+		{% capture post_date %}{{ post.date | date: "%Y%m%d" }}{% endcapture %}
+		{% if post_date < TODAY %}
+		<li><time>{{ post.date | date_to_string }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+</article>
+<article id="about">
+	<h2>PMOBとは</h2>
+	<p>
+	PMOBは、
+	2015年に東京電機大学にて創設された
+	プログラミングと数学に興味ある学生が集まって作られたサークルです。
+	</p>
+	<p>
+	現在、サークルでは計算機科学に関連する
+	ソフトフェア、ネットワーク等についての知識の共有や、
+	東京電機大学(鳩山キャンパス)における
+	プログラミング欲を満たせない難民を救うといった、
+	慈善活動も執り行っています。
+	</p>
+	<p>
+	サークルとしては何か強制されるようなものは無く、
+	各メンバーは自由に好きなことをやっている感じです。
+	</p>
+</article>
+<article id="member">
+	<h1>メンバー</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>名前</th>
+				<th>ひとこと</th>
+				<th>コンソメ</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for member in site.data.members %}
+			<tr>
+				<td>{{ member.name }}</td>
+				<td>{{ member.message }}</td>
+				<td>
+					{% if member.github != null %}
+					<a href="https://github.com/{{ member.github }}"><img alt="github" src="assets/images/GitHub-Mark-32px.png"></a>
+					{% endif %}
+					{% if member.twitter != null %}
+					<a href="https://twitter.com/{{ member.twitter }}"><img alt="github" src="assets/images/TwitterLogo.png"></a>
+					{% endif %}
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</article>
+<article id="works">
+	<h2>つくったの</h2>
+	<ul>
+		<li><a href="yomuyatu/">読むやつ</a></li>
+		<li><a href="https://github.com/PMOB">Organization Page on GitHub</a></li>
+		<ul>
+			<li><a href="https://github.com/PMOB/study-tex">study-tex</a></li>
 		</ul>
-		<article id="notice">
-			<h2>カモン</h2>
-			<p>
-			PMOBはプログラミングや数学に興味がある学生を求めています。
-			興味がある方は当サークルTwitterまたはSlackにてご連絡ください。
-			</p>
-			<ul>
-				<li><a href="https://twitter.com/PMOB_">Twitter</a></li>
-				<li><a href="https://github.com/PMOB">GitHub</a></li>
-				<li><a href="https://pmob.slack.com">PMOB Slack</a></li>
-			</ul>
-			<p>
-			なおSlackについてはメールドメイン<code>ms.dendai.ac.jp</code>による登録が許可されているため、
-			学内の方であれば自由に入ることができます。
-			</p>
-		</article>
-		<article id="history">
-			<h2>活動記録</h2>
-			<ul>
-				<li><time>Apr / 2015</time>設立</li>
-				<li><time>Nov / 2015</time><a href="yomuyatu/#01">部誌 #1</a>発行</li>
-				<li><time>Nov / 2015</time>話すやつ #1</li>
-				<li><time>Jan / 2016</time>話すやつ #2</li>
-			</ul>
-		</article>
-		<article id="about">
-			<h2>PMOBとは</h2>
-			<p>
-			PMOBは、
-			2015年に東京電機大学にて創設された
-			プログラミングと数学に興味ある学生が集まって作られたサークルです。
-			</p>
-			<p>
-			現在、サークルでは計算機科学に関連する
-			ソフトフェア、ネットワーク等についての知識の共有や、
-			東京電機大学(鳩山キャンパス)における
-			プログラミング欲を満たせない難民を救うといった、
-			慈善活動も執り行っています。
-			</p>
-			<p>
-			サークルとしては何か強制されるようなものは無く、
-			各メンバーは自由に好きなことをやっている感じです。
-			</p>
-		</article>
-		<article id="member">
-			<h1>メンバー</h1>
-			<table>
-				<thead>
-					<tr>
-						<th>名前</th>
-						<th>ひとこと</th>
-						<th>コンソメ</th>
-					</tr>
-				</thead>
-				<tbody>
-				</tbody>
-			</table>
-		</article>
-		<article id="works">
-			<h2>つくったの</h2>
-			<ul>
-				<li><a href="yomuyatu/">読むやつ</a></li>
-				<li><a href="https://github.com/PMOB">Organization Page on GitHub</a></li>
-				<ul>
-					<li><a href="https://github.com/PMOB/study-tex">study-tex</a></li>
-				</ul>
-			</ul>
-		</article>
-	</body>
-</html>
+	</ul>
+</article>
