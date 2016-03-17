@@ -8,18 +8,20 @@
 
 		<title>{{ page.title }} | PMOB</title>
 
-		<link href="assets/css/common.css" rel="stylesheet" type="text/css">
+		<link href="/assets/css/common.css" rel="stylesheet" type="text/css">
 		{% for css in page.use-css %}
-		<link href="assets/css/{{ css }}" rel="stylesheet" type="text/css">
+		<link href="/assets/css/{{ css }}" rel="stylesheet" type="text/css">
 		{% endfor %}
 
 		<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 		{% for js in page.use-js %}
-		<script src="assets/js/{{ js }}"></script>
+		<script src="/assets/js/{{ js }}"></script>
 		{% endfor %}
 	</head>
 	<body>
 		{{ content }}
-		{% include footer.html %}
+		<footer>
+			{% include footer.html %}
+		</footer>
 	</body>
 </html>

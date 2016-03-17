@@ -30,26 +30,29 @@ use-js:
 	</li>
 </ul>
 {% capture TODAY %}{{ site.time | date: "%Y%m%d" }}{% endcapture %}
-<article id="notice">
+<section id="notice">
 		{% for post in site.posts limit:3 %}
 		{% capture post_date %}{{ post.date | date: "%Y%m%d" }}{% endcapture %}
-		{% if post_date > TODAY %}
-		{{ post.excerpt }}
+		{% if post_date >= TODAY %}
+		<article>
+			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+			{{ post.excerpt }}
+		</article>
 		{% endif %}
 		{% endfor %}
-</article>
-<article id="history">
+</section>
+<section id="history">
 	<h2>活動記録</h2>
 	<ul>
-		{% for post in site.posts limit:10 %}
+		{% for post in site.posts limit:7 %}
 		{% capture post_date %}{{ post.date | date: "%Y%m%d" }}{% endcapture %}
 		{% if post_date < TODAY %}
 		<li><time>{{ post.date | date_to_string }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
 		{% endif %}
 		{% endfor %}
 	</ul>
-</article>
-<article id="about">
+</section>
+<section id="about">
 	<h2>PMOBとは</h2>
 	<p>
 	PMOBは、
@@ -67,8 +70,8 @@ use-js:
 	サークルとしては何か強制されるようなものは無く、
 	各メンバーは自由に好きなことをやっている感じです。
 	</p>
-</article>
-<article id="member">
+</section>
+<section id="member">
 	<h1>メンバー</h1>
 	<table>
 		<thead>
@@ -85,24 +88,24 @@ use-js:
 				<td>{{ member.message }}</td>
 				<td>
 					{% if member.github != null %}
-					<a href="https://github.com/{{ member.github }}"><img alt="github" src="assets/images/GitHub-Mark-32px.png"></a>
+					<a href="https://github.com/{{ member.github }}"><img alt="github" src="assets/images/GitHub-Mark-32px.png" class="icon"></a>
 					{% endif %}
 					{% if member.twitter != null %}
-					<a href="https://twitter.com/{{ member.twitter }}"><img alt="github" src="assets/images/TwitterLogo.png"></a>
+					<a href="https://twitter.com/{{ member.twitter }}"><img alt="github" src="assets/images/TwitterLogo.png" class="icon"></a>
 					{% endif %}
 				</td>
 			</tr>
 			{% endfor %}
 		</tbody>
 	</table>
-</article>
-<article id="works">
+</section>
+<section id="works">
 	<h2>つくったの</h2>
 	<ul>
 		<li><a href="yomuyatu/">読むやつ</a></li>
-		<li><a href="https://github.com/PMOB">Organization Page on GitHub</a></li>
+		<li><a href="https://github.com/PMOB">Organization on GitHub</a></li>
 		<ul>
 			<li><a href="https://github.com/PMOB/study-tex">study-tex</a></li>
 		</ul>
 	</ul>
-</article>
+</section>
