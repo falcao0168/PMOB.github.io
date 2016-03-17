@@ -2,4 +2,14 @@ future: true
 exclude:
   - CONTRIBUTING.md
 
-permalink: /history/:year/:month/:title
+permalink: /activity/:year/:month/:title
+paginate: 7
+paginate_path: "activity/page:num"
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Gems
+gems:
+  -jekyll paginate
