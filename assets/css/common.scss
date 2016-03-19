@@ -6,27 +6,22 @@
 @import "variables";
 @import "functions";
 
+
+/*** root element ***/
 html{ height: 100%; margin: 0; }
 
+
+/*** sections ***/
 body{
 	/* 概形 */
 	@include width-limit;
 	height: 100%;
+
 	/* デザイン */
 	background-color: $wall-color;
 	font-family: $base-font;
 	color: $base-color;
 }
-
-code{ font-family: $code-font; }
-  
-p{ text-indent: 1em; }
-hr{
-	background: $darker-wall-color;
-	height: 1px;
-	border: 0;
-}
-
 section{
 	/* 概形 */
 	width: 80%;
@@ -34,63 +29,102 @@ section{
 	padding: 1% 5%;
 	@include vprefix(padding-bottom, calc(1% + 40px));
 	font-size: 0.9em;
+
 	/* デザイン */
 	border: 3px solid $base-color;
 	background-color: $bg-color;
 	font-family: $base-font;
 	color: $base-color;
-	// 影つける
-	box-shadow:
+	box-shadow: // 影つける
 	3px -3px $emph-color, // 影（インパクト：赤）
 	6px -6px $base-color; // 影（実影：文字色）
 
-	/* h1 - h4 */
-	h1{ font-size: 1.8em; }
-	h2{ font-size: 1.4em; }
-	h3{ font-size: 1.2em; }
-
-	/* contens */
-	a{
-		color: $weak-color;
-		text-decoration: none;
-		&:visited{ color: $emph-color; }
-		&:hover{ color: $effect-color; text-decoration: underline; }
-	}
+	/* children */
 	article{
 		border: none;
 	}
-	time{ float: right; }
-	img{
-		margin: 3%;
-		max-width: 90%;
-		border: 1px solid $base-color;
-		&.linkicon{
-			border: none;
-			width: 16px;
-			height: 16px;
-		}
-	}
-
-	/* table */
-	table{ border-spacing: 10px 0; }
-	th{
-		padding: 0 8px;
-		text-align: left;
-	}
-	td{
-		@extend th;
-		border-bottom: 1px solid $base-color;
-	}
+}
+article{
+	@extend section;
 }
 
-article{ @extend section; }
-a.more{ float: right; }
+/* h1 - h6 */
+h1{ font-size: 1.8em; }
+h2{ font-size: 1.4em; }
+h3{ font-size: 1.2em; }
 
+/* edge sections */
 footer{
 	margin: 2% auto;
 	width: 80%;
+
+	/* children */
 	p{
 		color: $darker-bg-color;
 		text-align: center;
 	}
+}
+
+
+/*** grouping content ***/
+p{ text-indent: 1em; }
+hr{
+	background: $darker-wall-color;
+	height: 1px;
+	border: 0;
+}
+
+
+/*** text-level semantics ***/
+a{
+	color: $weak-color;
+	text-decoration: none;
+
+	/* pseudo class */
+	&:visited{
+		color: $emph-color;
+	}
+	&:hover{
+		color: $effect-color;
+		text-decoration: underline;
+	}
+}
+time{
+	float: right;
+}
+code{
+	margin: 0 2%;
+	font-family: $code-font;
+}
+
+
+/*** embedded content ***/
+img{
+	margin: 3%;
+	max-width: 90%;
+	border: 1px solid $base-color;
+}
+
+/*** tabular data ***/
+table{
+	margin: auto;
+	border-spacing: 10px 6px;
+}
+th{
+	padding: 0 8px;
+	text-align: left;
+}
+td{
+	@extend th;
+	border-bottom: 1px solid $base-color;
+}
+
+/*** specific design ***/
+a.more{ // 続きを読む
+	float: right;
+}
+img.linkicon{ // twitterやらgitのアイコン用
+	border: none;
+	width: 16px;
+	height: 16px;
 }

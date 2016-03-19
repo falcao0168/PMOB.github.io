@@ -28,21 +28,28 @@ header{
 	width: 100%;
 	height: 100%;
 	margin: 0;
+
 	/* デザイン */
 	color: $darker-bg-color;
 
+	/* children */
 	h1{
 		/* 概形 */
 		position: absolute;
 		top: 30%;
 		@include width-limit;
 		font-size: 10em;
+
 		/* デザイン */
 		text-align: center;
-		text-shadow:
+		text-shadow: // 影つける
 		3px -3px $emph-color, // 影（インパクト：赤）
 		6px -6px $base-color; // 影（実影：文字色）
-		&:hover { @include prefix(animation, ohyeah 0.1s linear infinite); }
+
+		/* pseudo class */
+		&:hover {
+			@include prefix(animation, ohyeah 0.1s linear infinite);
+		}
 	}
 
 	ul{
@@ -52,45 +59,50 @@ header{
 		@include width-limit;
 		height: 40px;
 		padding: 0;
+
 		/* デザイン */
 		list-style-type: none;
+	}
 
-		li{
+	li{
+		/* 概形 */
+		position: relative;
+		float: left;
+		font-size: 1em;
+		width: 16%;
+		height: 100%;
+		margin: 0 2%;
+
+		/* デザイン */
+		overflow: hidden;
+	}
+
+	p{
+		/* 概形 */
+		position: relative;
+		width: 100%;
+		height: 40px;
+		margin: 0;
+		padding: 6px 0;
+
+		/* デザイン */
+		color: $darker-bg-color;
+		text-decoration: none;
+		text-align: center;
+		text-indent: 0;
+
+		/* pseudo class */
+		&:nth-child(even) {
 			/* 概形 */
-			position: relative;
-			float: left;
-			font-size: 1em;
-			width: 16%;
-			height: 100%;
-			margin: 0 2%;
-			/* デザイン */
-			overflow: hidden;
+			position: absolute;
+			top: 90%;
+			right: 0;
+			height: 26px;
+			padding: 10px 0 0;
 
-			p{
-				@include prefix(box-sizing, inherit);
-				/* 概形 */
-				position: relative;
-				width: 100%;
-				height: 40px;
-				margin: 0;
-				padding: 6px 0;
-				/* デザイン */
-				color: $darker-bg-color;
-				text-decoration: none;
-				text-align: center;
-				text-indent: 0;
-				&:nth-child(even) {
-					/* 概形 */
-					position: absolute;
-					top: 90%;
-					right: 0;
-					height: 26px;
-					padding: 10px 0 0;
-					/* デザイン */
-					background-color: $more-darker-wall-color;
-					border-bottom: 4px solid $emph-color;
-				}
-			}
+			/* デザイン */
+			background-color: $more-darker-wall-color;
+			border-bottom: 4px solid $emph-color;
 		}
 	}
 }
@@ -101,6 +113,7 @@ a.ghost{
 	font-size: 0.6em;
 	margin: 1% 0;
 	padding: 2px 8px;
+
 	/* デザイン */
 	color: $base-color;
 	text-decoration: none;
@@ -108,7 +121,11 @@ a.ghost{
 	border-radius: 2px;
 	background-color: none;
 	transition: background-color 0.3s, color 0.1s;
-	&:visited{ color: $base-color; }
+
+	/* pseudo class */
+	&:visited{
+		color: $base-color;
+	}
 	&:hover {
 		color: $bg-color;
 		background-color: $wall-color;
