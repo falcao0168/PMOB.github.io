@@ -19,7 +19,7 @@ div#bg-box{
 	margin: 0 -12.5%;
 	background: $darker-wall-color;
 }
-div#top{
+header{
 	/* 概形 */
 	@include prefix(box-sizing, border-box);
 	position: absolute;
