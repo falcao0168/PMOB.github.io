@@ -13,15 +13,15 @@
 		<link href="/assets/css/{{ css }}" rel="stylesheet" type="text/css">
 		{% endfor %}
 
-		<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+		{% if page.use-js %}
+		<script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+		{% endif %}
 		{% for js in page.use-js %}
 		<script src="/assets/js/{{ js }}"></script>
 		{% endfor %}
 	</head>
 	<body>
 		{{ content }}
-		<footer>
-			{% include footer.html %}
-		</footer>
+		{% include footer.html %}
 	</body>
 </html>
