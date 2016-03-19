@@ -8,7 +8,7 @@ $PREFIXES: null, -moz-, -webkit-;
 
 @mixin vprefix($property, $value){
 	@each $prefix in $PREFIXES{
-		$property: #{$prefix}#{$value};
+		#{$property}: #{$prefix}#{$value};
 	}
 }
 
