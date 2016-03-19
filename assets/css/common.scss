@@ -1,0 +1,67 @@
+---
+---
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(http://fonts.googleapis.com/css?family=Play);
+
+@import "variables";
+
+body{
+	max-width: 800px;
+	width: 80%;
+	margin: 0 auto;
+	background-color: $wall-color;
+	font-family: $base-font;
+	color: $base-color;
+}
+
+p{ text-indent: 1em; }
+
+section{
+	width: 80%;
+	margin: 8% auto;
+	padding: 1% 5%;
+	padding-bottom: calc(1% + 40px);
+	font-size: 0.9em;
+	background-color: $bg-color;
+	font-family: $base-font;
+	color: $base-color;
+	/* 影つける */
+	box-shadow:
+	3px -3px $emph-color, // 影（インパクト：赤）
+	6px -6px $base-color; // 影（実影：文字色）
+
+	/* h1 - h4 */
+	h1{ font-size: 1.8em; }
+	h2{ font-size: 1.4em; }
+	h3{ font-size: 1.2em; }
+
+	/* contens */
+	time{ float: right; }
+	img{
+		margin: 3%;
+		width: 90%;
+		&.linkicon{
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	/* table */
+	table{ border-spacing: 10px 0; }
+	th{ text-align: center; }
+	td{
+		padding: 0 8px;
+		border-bottom: 1.6px solid $base-color;
+	}
+}
+
+footer{
+	margin: 2% auto;
+	width: 80%;
+	border-top: solid 1.6px $darker-wall-color;
+	p{
+		color: $darker-bg-color;
+		text-align: center;
+	}
+}
