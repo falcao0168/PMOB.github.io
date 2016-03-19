@@ -2,19 +2,23 @@
 $base-font: 'Montserrat', sans-serif;
 $code-font: 'Inconsolata', monospace;
 
+
 /*** colors ***/
 /* 壁紙 */
 $wall-color: #50b0a0;
 $darker-wall-color: darken($wall-color, 10%);
 $more-darker-wall-color: darken($wall-color, 20%);
+
 /* 記事やらの背景 */
 $bg-color: #fff5e6;
 $darker-bg-color: darken($bg-color, 5%);
+
 /* 文字色 */
 $base-color: #494949;
 $emph-color: darken(invert($wall-color), 10%);
 $weak-color: mix($base-color, #09f, 20%);
 $effect-color: mix($base-color, #f0f, 20%);
+
 
 /*** design ***/
 @mixin width-limit {
