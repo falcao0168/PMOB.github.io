@@ -20,6 +20,12 @@ body{
 }
 
 p{ text-indent: 1em; }
+hr{
+	@include vprefix(background-image,
+	linear-gradient(left, $wall-color, $darker-wall-color, $wall-color));
+	height: 1px;
+	border: 0;
+}
 
 section{
 	/* 概形 */
@@ -65,7 +71,6 @@ section{
 footer{
 	margin: 2% auto;
 	width: 80%;
-	border-top: solid 1.6px $darker-wall-color;
 	p{
 		color: $darker-bg-color;
 		text-align: center;

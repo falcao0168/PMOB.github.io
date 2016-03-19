@@ -30,6 +30,7 @@ header{
 	margin: 0;
 	/* デザイン */
 	color: $darker-bg-color;
+
 	h1{
 		/* 概形 */
 		position: absolute;
@@ -44,6 +45,7 @@ header{
 		6px -6px $base-color; // 影（実影：文字色）
 		&:hover { @include prefix(animation, ohyeah 0.1s linear infinite); }
 	}
+
 	ul{
 		/* 概形 */
 		position: absolute;
@@ -53,6 +55,7 @@ header{
 		padding: 0;
 		/* デザイン */
 		list-style-type: none;
+
 		li{
 			/* 概形 */
 			position: relative;
@@ -64,6 +67,7 @@ header{
 			/* デザイン */
 			overflow: hidden;
 			font-family: $index-font;
+
 			p{
 				@include prefix(box-sizing, inherit);
 				/* 概形 */
