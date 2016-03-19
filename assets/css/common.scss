@@ -32,6 +32,7 @@ section{
 	@include vprefix(padding-bottom, calc(1% + 40px));
 	font-size: 0.9em;
 	/* デザイン */
+	border: 3px solid $base-color;
 	background-color: $bg-color;
 	font-family: $base-font;
 	color: $base-color;
@@ -64,12 +65,18 @@ section{
 
 	/* table */
 	table{ border-spacing: 10px 0; }
-	th{ text-align: center; }
-	td{
+	th{
 		padding: 0 8px;
+		text-align: left;
+	}
+	td{
+		@extend th;
 		border-bottom: 1.6px solid $base-color;
 	}
 }
+
+article{ @extend section; }
+a.more{ float: right; }
 
 footer{
 	margin: 2% auto;
