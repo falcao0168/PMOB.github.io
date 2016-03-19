@@ -19,8 +19,7 @@ body{
 
 p{ text-indent: 1em; }
 hr{
-	@include vprefix(background-image,
-	linear-gradient(left, $wall-color, $darker-wall-color, $wall-color));
+	background: $darker-wall-color;
 	height: 1px;
 	border: 0;
 }
