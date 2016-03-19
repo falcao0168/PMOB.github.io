@@ -1,10 +1,8 @@
 ---
 ---
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-@import url(http://fonts.googleapis.com/css?family=Play);
-@import url(https://fonts.googleapis.com/css?family=Inconsolata);
-    
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
 @import "variables";
 @import "functions";
 
@@ -24,8 +22,7 @@ code{ font-family: $code-font; }
   
 p{ text-indent: 1em; }
 hr{
-	@include vprefix(background-image,
-	linear-gradient(left, $wall-color, $darker-wall-color, $wall-color));
+	background: $darker-wall-color;
 	height: 1px;
 	border: 0;
 }
@@ -38,6 +35,7 @@ section{
 	@include vprefix(padding-bottom, calc(1% + 40px));
 	font-size: 0.9em;
 	/* デザイン */
+	border: 3px solid $base-color;
 	background-color: $bg-color;
 	font-family: $base-font;
 	color: $base-color;
@@ -70,12 +68,18 @@ section{
 
 	/* table */
 	table{ border-spacing: 10px 0; }
-	th{ text-align: center; }
-	td{
+	th{
 		padding: 0 8px;
+		text-align: left;
+	}
+	td{
+		@extend th;
 		border-bottom: 1.6px solid $base-color;
 	}
 }
+
+article{ @extend section; }
+a.more{ float: right; }
 
 footer{
 	margin: 2% auto;

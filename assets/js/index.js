@@ -8,7 +8,7 @@ $(function(){
 	$("section").append( $backLink );
 
 	// リストぬるってする
-	$("div#top > ul > a > li").on({
+	$("header > ul > a > li").on({
 		"mouseenter": function(evnt){
 			$target = $( $(this).children("p")[1] );
 			$target.animate({top: "0"}, 200);

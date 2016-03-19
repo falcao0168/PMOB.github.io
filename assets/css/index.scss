@@ -36,9 +36,8 @@ header{
 		position: absolute;
 		top: 30%;
 		@include width-limit;
-		font-size: 8em;
+		font-size: 10em;
 		/* デザイン */
-		font-family: $top-font;
 		text-align: center;
 		text-shadow:
 		3px -3px $emph-color, // 影（インパクト：赤）
@@ -66,7 +65,6 @@ header{
 			margin: 0 2%;
 			/* デザイン */
 			overflow: hidden;
-			font-family: $index-font;
 
 			p{
 				@include prefix(box-sizing, inherit);
