@@ -1,22 +1,21 @@
 $(function(){
-	/* デザイン系 */
 	// 戻るボタンつくる
 	$backLink = $("<a></a>");
 	$backLink.addClass("ghost");
 	$backLink.addClass("smooth");
 	$backLink.attr("href", "#");
 	$backLink.html("あの頃にもどる");
-	$("article").append( $backLink );
+	$("section").append( $backLink );
 
 	// リストぬるってする
-	$("ul.top > li").on({
+	$("div#top > ul > a > li").on({
 		"mouseenter": function(evnt){
-			$target = $( $(this).children("a")[1] );
-			$target.animate({top: "0px"}, 200);
+			$target = $( $(this).children("p")[1] );
+			$target.animate({top: "0"}, 200);
 		},
 		"mouseleave": function(evnt){
-			$target = $( $(this).children("a")[1] );
-			$target.animate({top: "40px"}, 200);
+			$target = $( $(this).children("p")[1] );
+			$target.animate({top: "90%"}, 200);
 		}
 	});
 
