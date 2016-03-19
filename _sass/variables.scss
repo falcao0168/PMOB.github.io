@@ -1,19 +1,22 @@
-/* fonts */
+/*** fonts ***/
 $base-font: 'Montserrat', sans-serif;
 $code-font: 'Inconsolata', monospace;
 
-/* colors */
+/*** colors ***/
+/* 壁紙 */
 $wall-color: #50b0a0;
+$darker-wall-color: darken($wall-color, 10%);
+$more-darker-wall-color: darken($wall-color, 20%);
+/* 記事やらの背景 */
 $bg-color: #fff5e6;
-$darker-bg-color: #fce0c7;
+$darker-bg-color: darken($bg-color, 5%);
+/* 文字色 */
 $base-color: #494949;
-$emph-color: #904949;
-$weak-color: #4989c9;
-$effect-color: #c060c0;
-$darker-wall-color: #328a76;
-$more-darker-wall-color: #1a6246;
+$emph-color: darken(invert($wall-color), 10%);
+$weak-color: mix($base-color, #09f, 20%);
+$effect-color: mix($base-color, #f0f, 20%);
 
-/* design */
+/*** design ***/
 @mixin width-limit {
 	width: 80%;
 	margin: 0 10%;
