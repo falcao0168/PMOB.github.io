@@ -1,6 +1,6 @@
 future: true
 exclude:
-  - CONTRIBUTING.md
+- CONTRIBUTING.md
 
 permalink: /activity/:year/:month/:title
 paginate: 7
@@ -12,4 +12,4 @@ sass:
 
 # Gems
 gems:
-  -jekyll paginate
+- jekyll-paginate
