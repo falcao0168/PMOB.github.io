@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 話すやつ#2
+use-css:
+- post.css
 ---
 東京電機大学3320教室にて、
 教室備え付けのプロジェクタを借りて、
@@ -15,7 +17,7 @@ title: 話すやつ#2
 | いっちー   | | |
 | ざっきー   | | |
 | shamison   | | |
-| matsub.rk  | ソフトウェアライセンス | http://matsub.github.io/slides/LT_license/ |
+| matsub.rk  | ソフトウェアライセンス | [資料](http://matsub.github.io/slides/LT_license/) |
 | nomuken    | | |
 | めの       | | |
 | まのめっち | | |

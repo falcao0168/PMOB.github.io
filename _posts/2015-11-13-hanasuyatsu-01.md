@@ -10,5 +10,5 @@ title: 話すやつ#1
 |-----------|----------|------|
 | いっちー  |  |  |
 | cohalz    |  | |
-| matsub.rk | pmob.github.io | http://matsub.github.io/slides/LT_pmobIO/ |
+| matsub.rk | pmob.github.io | [資料](http://matsub.github.io/slides/LT_pmobIO/) |
 | shamison  |  | |
