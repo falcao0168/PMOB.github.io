@@ -7,39 +7,39 @@ use-js:
 - index.js
 ---
 <div id="top">
-<h1>PMOB</h1>
-<ul>
-	<a href="#notice" class="smooth">
-		<li>
-			<p>やるの</p>
-			<p>NOTICE</p>
-		</li>
-	</a>
-	<a href="#history" class="smooth">
-		<li>
-			<p>やったの</p>
-			<p>HISTORY</p>
-		</li>
-	</a>
-	<a href="#about" class="smooth">
-		<li>
-			<p>何なの</p>
-			<p>ABOUT</p>
-		</li>
-	</a>
-	<a href="#members" class="smooth">
-		<li>
-			<p>人たち</p>
-			<p>MEMBERS</p>
-		</li>
-	</a>
-	<a href="#works" class="smooth">
-		<li>
-			<p>作った</p>
-			<p>WORKS</p>
-		</li>
-	</a>
-</ul>
+	<h1>PMOB</h1>
+	<ul>
+		<a href="#notice" class="smooth">
+			<li>
+				<p>やるの</p>
+				<p>NOTICE</p>
+			</li>
+		</a>
+		<a href="#history" class="smooth">
+			<li>
+				<p>やったの</p>
+				<p>HISTORY</p>
+			</li>
+		</a>
+		<a href="#about" class="smooth">
+			<li>
+				<p>何なの</p>
+				<p>ABOUT</p>
+			</li>
+		</a>
+		<a href="#members" class="smooth">
+			<li>
+				<p>人たち</p>
+				<p>MEMBERS</p>
+			</li>
+		</a>
+		<a href="#works" class="smooth">
+			<li>
+				<p>作った</p>
+				<p>WORKS</p>
+			</li>
+		</a>
+	</ul>
 </div>
 {% capture TODAY %}{{ site.time | date: "%Y%m%d" }}{% endcapture %}
 <section id="notice">
@@ -65,16 +65,16 @@ use-js:
 		学内の方であれば自由に入ることができます。
 		</p>
 	</article>
-		{% for post in site.posts limit:3 %}
-		{% capture post_date %}{{ post.date | date: "%Y%m%d" }}{% endcapture %}
-		{% if post_date >= TODAY %}
-		<article>
-			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-			{{ post.excerpt }}
-			<a href="{{ post.url }}" class="more">続きを読む</a>
-		</article>
-		{% endif %}
-		{% endfor %}
+	{% for post in site.posts limit:3 %}
+	{% capture post_date %}{{ post.date | date: "%Y%m%d" }}{% endcapture %}
+	{% if post_date >= TODAY %}
+	<article>
+		<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+		{{ post.excerpt }}
+		<a href="{{ post.url }}" class="more">続きを読む</a>
+	</article>
+	{% endif %}
+	{% endfor %}
 </section>
 <section id="history">
 	<h1>活動記録</h1>
