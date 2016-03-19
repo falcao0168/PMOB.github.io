@@ -11,3 +11,9 @@ $base-color: #494949;
 $emph-color: #894949;
 $darker-wall-color: #328a76;
 $more-darker-wall-color: #1a6246;
+
+/* design */
+@mixin width-limit {
+	width: 80%;
+	margin: 0 10%;
+}
