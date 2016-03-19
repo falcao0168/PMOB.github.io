@@ -49,6 +49,12 @@ section{
 	h3{ font-size: 1.2em; }
 
 	/* contens */
+	a{
+		color: $weak-color;
+		text-decoration: none;
+		&:visited{ color: $emph-color; }
+		&:hover{ color: $effect-color; text-decoration: underline; }
+	}
 	time{ float: right; }
 	img{
 		margin: 3%;

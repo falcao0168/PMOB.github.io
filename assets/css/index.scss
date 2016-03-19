@@ -110,6 +110,7 @@ a.ghost{
 	border-radius: 2px;
 	background-color: none;
 	transition: background-color 0.3s, color 0.1s;
+	&:visited{ color: $base-color; }
 	&:hover {
 		color: $bg-color;
 		background-color: $wall-color;
