@@ -56,11 +56,16 @@ section{
 		&:visited{ color: $emph-color; }
 		&:hover{ color: $effect-color; text-decoration: underline; }
 	}
+	article{
+		border: none;
+	}
 	time{ float: right; }
 	img{
 		margin: 3%;
-		width: 90%;
+		max-width: 90%;
+		border: 1px solid $base-color;
 		&.linkicon{
+			border: none;
 			width: 16px;
 			height: 16px;
 		}
@@ -74,7 +79,7 @@ section{
 	}
 	td{
 		@extend th;
-		border-bottom: 1.6px solid $base-color;
+		border-bottom: 1px solid $base-color;
 	}
 }
 
