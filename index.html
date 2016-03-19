@@ -6,29 +6,41 @@ use-css:
 use-js:
 - index.js
 ---
-<h1 class="top">PMOB</h1>
-<ul class="top">
-	<li>
-		<a href="#notice" class="smooth">やるの</a>
-		<a href="#notice" class="smooth">NOTICE</a>
-	</li>
-	<li>
-		<a href="#history" class="smooth">やったの</a>
-		<a href="#history" class="smooth">HISTORY</a>
-	</li>
-	<li>
-		<a href="#about" class="smooth">何なの</a>
-		<a href="#about" class="smooth">ABOUT</a>
-	</li>
-	<li>
-		<a href="#member" class="smooth">人たち</a>
-		<a href="#member" class="smooth">MEMBER</a>
-	</li>
-	<li>
-		<a href="#works" class="smooth">作った</a>
-		<a href="#works" class="smooth">WORKS</a>
-	</li>
+<div id="top">
+<h1>PMOB</h1>
+<ul>
+	<a href="#notice" class="smooth">
+		<li>
+			<p>やるの</p>
+			<p>NOTICE</p>
+		</li>
+	</a>
+	<a href="#history" class="smooth">
+		<li>
+			<p>やったの</p>
+			<p>HISTORY</p>
+		</li>
+	</a>
+	<a href="#about" class="smooth">
+		<li>
+			<p>何なの</p>
+			<p>ABOUT</p>
+		</li>
+	</a>
+	<a href="#members" class="smooth">
+		<li>
+			<p>人たち</p>
+			<p>MEMBERS</p>
+		</li>
+	</a>
+	<a href="#works" class="smooth">
+		<li>
+			<p>作った</p>
+			<p>WORKS</p>
+		</li>
+	</a>
 </ul>
+</div>
 {% capture TODAY %}{{ site.time | date: "%Y%m%d" }}{% endcapture %}
 <section id="notice">
 		{% for post in site.posts limit:3 %}
