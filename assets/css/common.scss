@@ -5,11 +5,14 @@
 @import url(http://fonts.googleapis.com/css?family=Play);
 
 @import "variables";
+@import "functions";
 
 body{
+	/* 概形 */
 	max-width: 800px;
 	width: 80%;
 	margin: 0 auto;
+	/* デザイン */
 	background-color: $wall-color;
 	font-family: $base-font;
 	color: $base-color;
@@ -18,15 +21,17 @@ body{
 p{ text-indent: 1em; }
 
 section{
+	/* 概形 */
 	width: 80%;
 	margin: 8% auto;
 	padding: 1% 5%;
-	padding-bottom: calc(1% + 40px);
+	@include vprefix(padding-bottom, calc(1% + 40px));
 	font-size: 0.9em;
+	/* デザイン */
 	background-color: $bg-color;
 	font-family: $base-font;
 	color: $base-color;
-	/* 影つける */
+	// 影つける
 	box-shadow:
 	3px -3px $emph-color, // 影（インパクト：赤）
 	6px -6px $base-color; // 影（実影：文字色）
