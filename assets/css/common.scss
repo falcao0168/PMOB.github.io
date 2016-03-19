@@ -1,6 +1,7 @@
 ---
 ---
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
 
 @import "variables";
 @import "functions";
@@ -17,6 +18,8 @@ body{
 	color: $base-color;
 }
 
+code{ font-family: $code-font; }
+  
 p{ text-indent: 1em; }
 hr{
 	background: $darker-wall-color;
