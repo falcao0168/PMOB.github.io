@@ -54,18 +54,18 @@ use-js:
 		{% endfor %}
 </section>
 <section id="history">
-	<h2>活動記録</h2>
+	<h1>活動記録</h1>
 	<ul>
 		{% for post in site.posts limit:7 %}
 		{% capture post_date %}{{ post.date | date: "%Y%m%d" }}{% endcapture %}
 		{% if post_date < TODAY %}
-		<li><time>{{ post.date | date_to_string }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+		<li><a href="{{ post.url }}">{{ post.title }}</a><time>{{ post.date | date: "%b / %Y" }}</time></li>
 		{% endif %}
 		{% endfor %}
 	</ul>
 </section>
 <section id="about">
-	<h2>PMOBとは</h2>
+	<h1>PMOBとは</h1>
 	<p>
 	PMOBは、
 	2015年に東京電機大学にて創設された
@@ -83,7 +83,7 @@ use-js:
 	各メンバーは自由に好きなことをやっている感じです。
 	</p>
 </section>
-<section id="member">
+<section id="members">
 	<h1>メンバー</h1>
 	<table>
 		<thead>
@@ -100,10 +100,10 @@ use-js:
 				<td>{{ member.message }}</td>
 				<td>
 					{% if member.github != null %}
-					<a href="https://github.com/{{ member.github }}"><img alt="github" src="assets/images/GitHub-Mark-32px.png" class="icon"></a>
+					<a href="https://github.com/{{ member.github }}"><img alt="github" src="assets/images/GitHub-Mark-32px.png" class="linkicon"></a>
 					{% endif %}
 					{% if member.twitter != null %}
-					<a href="https://twitter.com/{{ member.twitter }}"><img alt="github" src="assets/images/TwitterLogo.png" class="icon"></a>
+					<a href="https://twitter.com/{{ member.twitter }}"><img alt="github" src="assets/images/TwitterLogo.png" class="linkicon"></a>
 					{% endif %}
 				</td>
 			</tr>
@@ -112,7 +112,7 @@ use-js:
 	</table>
 </section>
 <section id="works">
-	<h2>つくったの</h2>
+	<h1>つくったの</h1>
 	<ul>
 		<li><a href="yomuyatu/">読むやつ</a></li>
 		<li><a href="https://github.com/PMOB">Organization on GitHub</a></li>
