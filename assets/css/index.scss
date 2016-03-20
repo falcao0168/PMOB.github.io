@@ -4,6 +4,13 @@
 @import "functions";
 
 
+@media (max-width: 625px){
+	header{
+		a:nth-child(even){
+			display: none;
+		}
+	}
+}
 @media (min-width: 625px){
 	#bg-box{
 		@include fullscreen;

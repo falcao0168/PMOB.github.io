@@ -32,6 +32,9 @@ body{
 	background-color: $wall-color;
 	font-family: $base-font;
 	color: $base-color;
+	@media (max-width: 625px){
+		font-size: 0.7em;
+	}
 }
 section{
 	/* layout */
@@ -88,7 +91,7 @@ header{
 	color: $darker-bg-color;
 	h1{
 		margin: 0;
-		font-size: 2rem;
+		font-size: 2em;
 		text-align: center;
 		&:hover {
 			@include prefix(animation, ohyeah 0.1s linear infinite);
