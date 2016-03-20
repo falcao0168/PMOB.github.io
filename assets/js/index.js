@@ -7,17 +7,34 @@ $(function(){
 	$backLink.html("あの頃にもどる");
 	$("section").append( $backLink );
 
-	// リストぬるってする
-	$("header > ul > a > li").on({
-		"mouseenter": function(evnt){
-			$target = $( $(this).children("p")[1] );
-			$target.animate({top: "-40px"}, 200);
-		},
-		"mouseleave": function(evnt){
-			$target = $( $(this).children("p")[1] );
-			$target.animate({top: "-4px"}, 200);
-		}
-	});
+	// @mediaルールにしたがってぬめりをつける
+	if (window.matchMedia('(min-width: 625px)').matches) {
+		$numeri = $("header > ul > li");
+
+		$numeri.each(function(index, element){
+			$anchor = $(element).find("a");
+			href = $anchor.attr("href");
+			title = href.substr(1).toUpperCase();
+
+			$numerare = $("<a></a>");
+			$numerare.addClass("smooth");
+			$numerare.attr("href", href);
+			$numerare.html(title);
+			$anchor.after( $numerare );
+		});
+
+		// リストぬるってする
+		$numeri.on({
+			"mouseenter": function(evnt){
+				$target = $( $(this).children("a")[1] );
+				$target.animate({top: "-40px"}, 200);
+			},
+			"mouseleave": function(evnt){
+				$target = $( $(this).children("a")[1] );
+				$target.animate({top: "-4px"}, 200);
+			}
+		});
+	}
 
 	// スムーズスクロール
 	$("a.smooth").click(function(){
