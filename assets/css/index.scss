@@ -14,9 +14,8 @@
 }
 
 div#bg-box{
-	width: 125%;
+	@include fullscreen;
 	height: 100%;
-	margin: 0 -12.5%;
 	background: $darker-wall-color;
 }
 header{

@@ -21,7 +21,15 @@ $effect-color: mix($base-color, #f0f, 20%);
 
 
 /*** design ***/
+// 絶対幅に対する統一
 @mixin width-limit {
 	width: 80%;
 	margin: 0 10%;
+}
+
+// absoluteでないwidth-limit環境で
+// フルスクリーンにする
+@mixin fullscreen {
+	width: 125%;
+	margin-left: -12.5%;
 }
