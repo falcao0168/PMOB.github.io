@@ -7,6 +7,16 @@
 @import "functions";
 
 
+/*** animation ***/
+/* ブルブルする */
+@include keyframes(ohyeah){
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+	25% { transform: translate(2px, -1px) rotate(0deg); }
+	50% { transform: translate(0px, 1px) rotate(0deg); }
+	75% { transform: translate(1px, 0px) rotate(-1deg); }
+	100% { transform: translate(-1px, 0px) rotate(1deg); }
+}
+
 /*** root element ***/
 *{ @include prefix(box-sizing, border-box); }
 html{ height: 100%; margin: 0; }
@@ -62,16 +72,32 @@ header{
 		padding-top: 1%;
 		font-size: 2rem;
 		text-align: center;
-		color: $darker-bg-color;
+		&:hover {
+			@include prefix(animation, ohyeah 0.1s linear infinite);
+		}
 	}
 	ul{
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
+		padding: 1%;
 		list-style: none;
 	}
 	li{
-		flex: 1 0 0px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	a{
+		text-decoration: none;
+		color: $darker-bg-color;
+		&:hover, &:visited{
+			text-decoration: none;
+			color: $darker-bg-color;
+		}
+		&:active{
+			color: $emph-color;
+		}
 	}
 }
 footer{
@@ -142,20 +168,4 @@ td{
 /*** specific design ***/
 a.more{ // 続きを読む
 	float: right;
-}
-img.linkicon{ // twitterやらgitのアイコン用
-	border: none;
-	width: 16px;
-	height: 16px;
-}
-iframe#eva{
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	opacity: 0.9;
-	background: #000;
-	height: 60%;
-	width: 60%;
-	padding: 20%;
 }
