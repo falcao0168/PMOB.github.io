@@ -19,8 +19,7 @@ div#bg-box{
 	background: $darker-wall-color;
 }
 header{
-	/* 概形 */
-	@include prefix(box-sizing, border-box);
+	/* layout */
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -28,18 +27,18 @@ header{
 	height: 100%;
 	margin: 0;
 
-	/* デザイン */
+	/* design */
 	color: $darker-bg-color;
 
 	/* children */
 	h1{
-		/* 概形 */
+		/* layout */
 		position: absolute;
 		top: 30%;
 		@include width-limit;
 		font-size: 10em;
 
-		/* デザイン */
+		/* design */
 		text-align: center;
 		text-shadow: // 影つける
 		3px -3px $emph-color, // 影（インパクト：赤）
@@ -52,43 +51,47 @@ header{
 	}
 
 	ul{
-		/* 概形 */
+		/* layout */
 		position: absolute;
 		bottom: 8%;
-		height: 60px;
+		height: 40px;
 		width: 100%;
 		padding: 0 10%;
 
-		/* デザイン */
+		/* design */
 		list-style-type: none;
 	}
 
 	li{
-		/* 概形 */
+		/* layout */
 		font-size: 1em;
-		height: 60px;
+		height: 40px;
 
-		/* デザイン */
+		/* design */
 		overflow: hidden;
 	}
 
 	p{
-		/* デザイン */
+		/* layout */
+		height: 40px;
+		padding: 10px;
+		margin: 0;
+
+		/* design */
 		color: $darker-bg-color;
 		text-indent: 0;
 		text-align: center;
-		padding: 10px;
 
 		/* pseudo class */
 		&:nth-child(even) {
-			/* 概形 */
+			/* layout */
 			position: relative;
-			top: -20px;
+			top: -4px;
 			right: 0;
 
-			/* デザイン */
+			/* design */
 			background-color: $more-darker-wall-color;
-			border-bottom: 5px solid $emph-color;
+			border-bottom: 4px solid $emph-color;
 		}
 	}
 	a{
@@ -100,13 +103,13 @@ header{
 }
 
 a.ghost{
-	/* 概形 */
+	/* layout */
 	float: right;
 	font-size: 0.6em;
 	margin: 1% 0;
 	padding: 2px 8px;
 
-	/* デザイン */
+	/* design */
 	color: $base-color;
 	text-decoration: none;
 	border: 2px solid $wall-color;

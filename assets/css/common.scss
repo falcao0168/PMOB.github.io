@@ -8,29 +8,29 @@
 
 
 /*** root element ***/
+*{ @include prefix(box-sizing, border-box); }
 html{ height: 100%; margin: 0; }
 
 
 /*** sections ***/
 body{
-	/* 概形 */
+	/* layout */
 	@include width-limit;
 	height: 100%;
 
-	/* デザイン */
+	/* design */
 	background-color: $wall-color;
 	font-family: $base-font;
 	color: $base-color;
 }
 section{
-	/* 概形 */
-	width: 80%;
+	/* layout */
 	margin: 8% auto;
 	padding: 1% 5%;
 	@include vprefix(padding-bottom, calc(1% + 40px));
 	font-size: 0.9em;
 
-	/* デザイン */
+	/* design */
 	border: 3px solid $base-color;
 	background-color: $bg-color;
 	font-family: $base-font;
@@ -55,7 +55,6 @@ h3{ font-size: 1.2em; }
 
 /* edge sections */
 header{
-	@include prefix(box-sizing, border-box);
 	@include fullscreen;
 	background: $darker-wall-color;
 	h1{
@@ -66,11 +65,13 @@ header{
 		color: $darker-bg-color;
 	}
 	ul{
-		@include prefix(box-sizing, inherit);
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
 		list-style: none;
+	}
+	li{
+		flex: 1 0 0px;
 	}
 }
 footer{
