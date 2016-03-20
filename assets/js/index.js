@@ -11,11 +11,11 @@ $(function(){
 	$("header > ul > a > li").on({
 		"mouseenter": function(evnt){
 			$target = $( $(this).children("p")[1] );
-			$target.animate({top: "0"}, 200);
+			$target.animate({top: "-60px"}, 200);
 		},
 		"mouseleave": function(evnt){
 			$target = $( $(this).children("p")[1] );
-			$target.animate({top: "90%"}, 200);
+			$target.animate({top: "-20px"}, 200);
 		}
 	});
 

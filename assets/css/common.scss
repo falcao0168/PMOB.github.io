@@ -54,6 +54,26 @@ h2{ font-size: 1.4em; }
 h3{ font-size: 1.2em; }
 
 /* edge sections */
+header{
+	@include prefix(box-sizing, border-box);
+	width: 125%;
+	margin-left: -12.5%;
+	background: $darker-wall-color;
+	h1{
+		margin: 0;
+		padding-top: 1%;
+		font-size: 2rem;
+		text-align: center;
+		color: $darker-bg-color;
+	}
+	ul{
+		@include prefix(box-sizing, inherit);
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		list-style: none;
+	}
+}
 footer{
 	margin: 2% auto;
 	width: 80%;
@@ -127,4 +147,15 @@ img.linkicon{ // twitterやらgitのアイコン用
 	border: none;
 	width: 16px;
 	height: 16px;
+}
+iframe#eva{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0.9;
+	background: #000;
+	height: 60%;
+	width: 60%;
+	padding: 20%;
 }
