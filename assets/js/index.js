@@ -9,8 +9,12 @@ $(function(){
 
 	// @mediaルールにしたがってぬめりをつける
 	if (window.matchMedia('(min-width: 625px)').matches) {
+		// ぬるってするところは
+		// header > ul > li > a
+		// です
 		$numeri = $("header > ul > li");
 
+		// 参照先ID名をぬるってさせる文字にします
 		$numeri.each(function(index, element){
 			$anchor = $(element).find("a");
 			href = $anchor.attr("href");
