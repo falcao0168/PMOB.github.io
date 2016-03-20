@@ -54,6 +54,24 @@ section{
 		border: none;
 	}
 }
+nav{
+	color: $darker-bg-color;
+	text-align: center;
+	span{
+		color: $base-color;
+	}
+	a{
+		text-decoration: none;
+		color: inherit;
+		&:hover, &:visited{
+			text-decoration: none;
+			color: inherit;
+		}
+		&:active{
+			color: $emph-color;
+		}
+	}
+}
 article{
 	@extend section;
 }
@@ -67,9 +85,9 @@ h3{ font-size: 1.2em; }
 header{
 	@include fullscreen;
 	background: $darker-wall-color;
+	color: $darker-bg-color;
 	h1{
 		margin: 0;
-		padding-top: 1%;
 		font-size: 2rem;
 		text-align: center;
 		&:hover {
@@ -81,19 +99,23 @@ header{
 		display: flex;
 		justify-content: space-around;
 		padding: 1%;
+		padding-top: 0;
 		list-style: none;
 	}
 	li{
-		&:hover{
-			text-decoration: underline;
+		a{
+			border-bottom: 3px solid $more-darker-wall-color;
+			&:hover{
+				border-bottom: 3px solid $emph-color;
+			}
 		}
 	}
 	a{
 		text-decoration: none;
-		color: $darker-bg-color;
+		color: inherit;
 		&:hover, &:visited{
 			text-decoration: none;
-			color: $darker-bg-color;
+			color: inherit;
 		}
 		&:active{
 			color: $emph-color;

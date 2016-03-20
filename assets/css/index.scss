@@ -4,88 +4,93 @@
 @import "functions";
 
 
-div#bg-box{
-	@include fullscreen;
-	height: 100%;
-	background: $darker-wall-color;
-}
-header{
-	/* layout */
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-
-	/* design */
-	color: $darker-bg-color;
-
-	/* children */
-	h1{
-		/* layout */
-		position: absolute;
-		top: 30%;
-		@include width-limit;
-		font-size: 10em;
-
-		/* design */
-		text-align: center;
-		text-shadow: // 影つける
-		3px -3px $emph-color, // 影（インパクト：赤）
-		6px -6px $base-color; // 影（実影：文字色）
+@media (min-width: 625px){
+	div#bg-box{
+		@include fullscreen;
+		height: 100%;
+		background: $darker-wall-color;
 	}
-
-	ul{
+	header{
 		/* layout */
 		position: absolute;
-		bottom: 8%;
-		height: 40px;
-		padding: 0 10%;
+		top: 0;
+		left: 0;
 		width: 100%;
-		display: flex;
-		justify-content: space-around;
-
-		/* design */
-		list-style-type: none;
-	}
-
-	li{
-		/* layout */
-		font-size: 1em;
-		height: 40px;
-
-		/* design */
-		overflow: hidden;
-	}
-
-	p{
-		/* layout */
-		height: 40px;
-		padding: 10px;
+		height: 100%;
 		margin: 0;
 
 		/* design */
 		color: $darker-bg-color;
-		text-indent: 0;
-		text-align: center;
 
-		/* pseudo class */
-		&:nth-child(even) {
+		/* children */
+		h1{
 			/* layout */
-			position: relative;
-			top: -4px;
-			right: 0;
+			position: absolute;
+			top: 30%;
+			@include width-limit;
+			font-size: 10em;
 
 			/* design */
-			background-color: $more-darker-wall-color;
-			border-bottom: 4px solid $emph-color;
+			text-align: center;
+			text-shadow: // 影つける
+			3px -3px $emph-color, // 影（インパクト：赤）
+			6px -6px $base-color; // 影（実影：文字色）
 		}
-	}
-	a{
-		text-decoration: none;
-		&:hover, &:active{
+
+		ul{
+			/* layout */
+			position: absolute;
+			bottom: 8%;
+			height: 40px;
+			padding: 0 10%;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+
+			/* design */
+			list-style-type: none;
+		}
+
+		li{
+			/* layout */
+			font-size: 1em;
+			height: 40px;
+
+			/* design */
+			overflow: hidden;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+
+		p{
+			/* layout */
+			height: 40px;
+			padding: 10px;
+			margin: 0;
+
+			/* design */
+			color: $darker-bg-color;
+			text-indent: 0;
+			text-align: center;
+
+			/* pseudo class */
+			&:nth-child(even) {
+				/* layout */
+				position: relative;
+				top: -4px;
+				right: 0;
+
+				/* design */
+				background-color: $more-darker-wall-color;
+				border-bottom: 4px solid $emph-color;
+			}
+		}
+		a{
 			text-decoration: none;
+			&:hover, &:active{
+				text-decoration: none;
+			}
 		}
 	}
 }
