@@ -8,7 +8,4 @@ title: 話すやつ#1
 
 | 発表者    | 発表内容 | 備考 |
 |-----------|----------|------|
-| いっちー  |  |  |
-| cohalz    |  | |
 | matsub.rk | pmob.github.io | [資料](http://matsub.github.io/slides/LT_pmobIO/) |
-| shamison  |  | |

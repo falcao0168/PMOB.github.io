@@ -12,15 +12,5 @@ title: 話すやつ#2
 
 | 発表者     | 発表内容 | 備考 |
 |------------|----------|------|
-| いっちー   | | |
-| ざっきー   | | |
-| shamison   | | |
 | matsub.rk  | ソフトウェアライセンス | [資料](http://matsub.github.io/slides/LT_license/) |
-| nomuken    | | |
-| めの       | | |
 | まのめっち | ComputerCraftを楽しむ | [資料](http://asatake.github.io/slides/pmobLT01/) |
-| cohalz     | | |
-| 白鷹       | | |
-| zodiac     | | |
-| falcao     | | |
-| うに       | | |
