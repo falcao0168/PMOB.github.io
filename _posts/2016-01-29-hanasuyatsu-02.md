@@ -14,3 +14,4 @@ title: 話すやつ#2
 |------------|----------|------|
 | matsub.rk  | ソフトウェアライセンス | [資料](http://matsub.github.io/slides/LT_license/) |
 | まのめっち | ComputerCraftを楽しむ | [資料](http://asatake.github.io/slides/pmobLT01/) |
+| shamison   | D言語を始めた話 | [資料](http://shamison.com/slides/d-is-awesome/) |
