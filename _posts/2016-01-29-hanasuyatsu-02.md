@@ -18,7 +18,7 @@ title: 話すやつ#2
 | matsub.rk  | ソフトウェアライセンス | [資料](http://matsub.github.io/slides/LT_license/) |
 | nomuken    | | |
 | めの       | | |
-| まのめっち | | |
+| まのめっち | ComputerCraftを楽しむ | [資料](http://asatake.github.io/slides/pmobLT01/) |
 | cohalz     | | |
 | 白鷹       | | |
 | zodiac     | | |
