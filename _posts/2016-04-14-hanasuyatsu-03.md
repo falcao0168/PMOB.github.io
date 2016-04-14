@@ -9,3 +9,4 @@ title: 話すやつ#3
 | 発表者     | 発表内容 | 備考 |
 |------------|----------|------|
 | matsub.rk  | 単体テスト | [資料](http://matsub.github.io/slides/LT_unit_test/#/) |
+| shamison   | 遊び | [資料](http://shamison.com/slides/asobi/) |
