@@ -21,8 +21,20 @@ use-js:
 <section id="notice">
 	<h1>活動予定とか</h1>
 	<article>
-		{% capture md %}{% include cmon.md %}{% endcapture %}
-		{{ md | markdownify }}
+		<h1>PMOBに入りませんか</h1>
+		<p>
+		PMOBはプログラミングや数学に興味がある学生を求めています。
+		興味がある方は当サークルTwitterまたはSlackにてご連絡ください。
+		</p>
+		<ul>
+			<li><a href="https://twitter.com/PMOB_">Twitter</a></li>
+			<li><a href="https://github.com/PMOB">GitHub</a></li>
+			<li><a href="https://pmob.slack.com">Slack</a></li>
+		</ul>
+		<p>
+		なおSlackについてはメールドメイン<code>ms.dendai.ac.jp</code>による登録が許可されているため、
+		学内の方であれば自由に入ることができます。
+		</p>
 	</article>
 	{% for post in site.posts limit:3 %}
 	{% capture post_date %}{{ post.date | date: "%Y%m%d" }}{% endcapture %}
@@ -48,8 +60,21 @@ use-js:
 	</ul>
 </section>
 <section id="about">
-	{% capture md %}{% include aboutus.md %}{% endcapture %}
-	{{ md | markdownify }}
+	<h1>PMOBとは</h1>
+	<p>
+	PMOBは、
+	2015年に東京電機大学にて創設された
+	プログラミングと数学に興味ある学生が集まって作られたサークルです。
+
+	現在、サークルでは計算機科学に関連する
+	ソフトフェア、ネットワーク等についての知識の共有や、
+	東京電機大学(鳩山キャンパス)における
+	プログラミング欲を満たせない難民を救うといった、
+	慈善活動も執り行っています。
+
+	サークルとしては何か強制されるようなものは無く、
+	各メンバーは自由に好きなことをやっている感じです。
+	</p>
 </section>
 <section id="members">
 	<h1>メンバー</h1>
