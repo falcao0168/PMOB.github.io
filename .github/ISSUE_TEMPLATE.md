@@ -3,7 +3,7 @@ Issue立てガイド
 その問題はすでに解決している、あるいは説明されている問題である可能性があります。
 Issueを開く前に過去のIssuesなどを調べてみてください。
 
-- [ ] [Issue](https://github.com/PMOB/yomuyatu/issues?q=is%3Aissue+is%3Aclosed)
+- [ ] [Issue](https://github.com/PMOB/PMOB.github.io/issues?q=is%3Aissue+is%3Aclosed)
 - [ ] [wiki](https://github.com/PMOB/PMOB.github.io/wiki)
 - [ ] [Slack](https://pmob.slack.com/messages/homepage)
 
