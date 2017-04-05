@@ -6,17 +6,17 @@ wikiを参照してください。
 
 メンバー登録
 ========
-[update][branch]ブランチで[_data/members.yml][blob]を弄って追加し、
+[update][branch] ブランチで `_data/members.yml` を弄って追加し、
 masterへのPull Requestを立ててください。
-Pull Requestマージ後にブランチの削除は必要ありません。
+マージ後にブランチの削除は必要ありません。
 
 有効な値は以下です。
 
-| key     | value  |
-|---------|--------|
-| name    | 名前 |
-| message | ひとこと |
-| github  | GitHubユーザID |
+| key     | value           |
+|---------|-----------------|
+| name    | 名前            |
+| message | ひとこと        |
+| github  | GitHubユーザID  |
 | twitter | twitterユーザID |
 
 名前くらいは書いてくれるとそれっぽくなる。
@@ -26,4 +26,3 @@ Pull Requestマージ後にブランチの削除は必要ありません。
 テンプレートの変更なりなんなりの対策を取るためにIssueかPR立ててください。
 
 [branch]: https://github.com/PMOB/PMOB.github.io/tree/update
-[blob]: https://github.com/PMOB/PMOB.github.io/blob/update/_data/members.yml
